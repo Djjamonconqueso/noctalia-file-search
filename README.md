@@ -15,7 +15,7 @@ noctalia msg plugins enable yo/ollama-file-search
 
 File Search does not include DigUp's CLI helper or model. Download DigUp from its [official GitHub releases](https://github.com/ARahim3/DigUp/releases): use the AppImage on Arch and most other Linux distributions, or the `.deb` package on Debian, Ubuntu, and Mint. Open DigUp, download its model, select folders, and let it index them.
 
-The plugin uses DigUp's `digup` helper, not the `digup-shell` graphical launcher. It looks for the helper automatically in the `PATH`, the system `.deb` location, App Manager installs under `~/Applications/.installed` and `~/Applications/DigUp Portable`, and an open AppImage. If detection fails, set **DigUp CLI path** to the helper, usually `<DigUp install>/usr/lib/DigUp/helper/digup`. See the [plugin README](ollama-file-search/README.md) for setup details.
+The plugin uses DigUp's `digup` helper, not the `digup-shell` graphical launcher. It looks for the helper automatically in the `PATH`, the system `.deb` location, installs made with [App Manager](https://github.com/kem-a/AppManager) under `~/Applications/.installed` and `~/Applications/DigUp Portable`, and an open AppImage. If detection fails, set **DigUp CLI path** to the helper, usually `<DigUp install>/usr/lib/DigUp/helper/digup`. See the [plugin README](ollama-file-search/README.md) for setup details.
 
 ## Local development
 

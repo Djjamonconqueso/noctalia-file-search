@@ -12,7 +12,7 @@ Search the local index maintained by DigUp from a Noctalia panel. Browse semanti
 ## Requirements
 
 - Install DigUp separately from its [official GitHub releases](https://github.com/ARahim3/DigUp/releases). Use its AppImage on Arch and other distributions, or its `.deb` package on Debian, Ubuntu, and Mint. Open DigUp, download its model, choose folders, and let it index them.
-- The plugin calls the `digup` CLI helper. It tries the `PATH`, the system `.deb` location, App Manager installations under `~/Applications/.installed` and `~/Applications/DigUp Portable`, and an open AppImage. If automatic detection fails, set **DigUp CLI path** to the helper's full path. The App Manager helper is usually at `~/Applications/.installed/DigUp/usr/lib/DigUp/helper/digup`; the AppImage must remain open for automatic detection.
+- The plugin calls the `digup` CLI helper. It tries the `PATH`, the system `.deb` location, installations made with [App Manager](https://github.com/kem-a/AppManager) under `~/Applications/.installed` and `~/Applications/DigUp Portable`, and an open AppImage. If automatic detection fails, set **DigUp CLI path** to the helper's full path. The App Manager helper is usually at `~/Applications/.installed/DigUp/usr/lib/DigUp/helper/digup`; the AppImage must remain open for automatic detection.
 - External commands: `digup`, `find`, `sh`, `pgrep`, `readlink`, and `xdg-open`.
 - Optional preview commands: `ffmpeg` for video thumbnails and `pdftoppm` (Poppler) for PDF previews.
 - Noctalia Shell 5.4.0 or later (plugin API 43).
