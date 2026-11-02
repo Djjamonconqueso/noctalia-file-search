@@ -577,10 +577,6 @@ render = function()
     panel.render(ui.column({ key = previewVisible and "file-search-preview" or "file-search-results", gap = 8, padding = 12, fill = "surface" }, children))
 end
 
-function update()
-    -- DigUp searches run as one-shot CLI processes; no polling is needed.
-end
-
 function onKey(chord, pressed)
     local isPressed = pressed == true or pressed == "true"
     if not isPressed or not isOpen then return end
@@ -658,7 +654,6 @@ function onOpen(_context)
     selectedIndex = 1
     filter = "all"
     statusText = ""
-    noctalia.setUpdateInterval(1000)
     render()
 end
 
