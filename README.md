@@ -1,6 +1,6 @@
 # File Search for Noctalia
 
-A plugin source repository for Noctalia. File Search provides a panel for searching and previewing files indexed locally by DigUp.
+A plugin source repository for Noctalia. File Search provides a panel for searching and previewing files indexed locally by DigUp, plus an optional bar icon to open the panel.
 
 ## Install from GitHub
 

@@ -1,12 +1,12 @@
 id = "yo/ollama-file-search"
 name = "File Search"
-version = "1.9.2"
+version = "1.9.3"
 plugin_api = 43
 author = "yo"
 license = "MIT"
 icon = "search"
 description = "Panel de búsqueda Noctalia para el índice local de DigUp."
-tags = ["panel", "ai", "productivity", "utility"]
+tags = ["bar", "panel", "ai", "productivity", "utility"]
 dependencies = ["digup", "find", "ffmpeg", "pdftoppm", "pgrep", "readlink", "sh", "xdg-open"]
 
 [[setting]]
@@ -43,3 +43,7 @@ position = "center"
 keyboard_focus = "exclusive"
 dismiss_on_outside_click = true
 capture_keys = ["up", "down", "left", "right", "space", "ctrl+k", "Return"]
+
+[[widget]]
+id = "bar_icon"
+entry = "bar.luau"

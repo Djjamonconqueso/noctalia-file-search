@@ -39,5 +39,6 @@
   "search.empty_hint": "Use folders indexed by DigUp.",
   "results.empty_filter": "No files of this type.",
   "results.keyboard_hint_pinned": "↑↓ change file · ←→ change filter · Enter open · Ctrl+K new search · {count} results",
-  "results.keyboard_hint_toggle": "↑↓ change file · ←→ change filter · Enter open · Space preview · Ctrl+K new search · {count} results"
+  "results.keyboard_hint_toggle": "↑↓ change file · ←→ change filter · Enter open · Space preview · Ctrl+K new search · {count} results",
+  "bar.tooltip": "Open File Search"
 }

@@ -1,11 +1,11 @@
 [[plugin]]
 id = "yo/ollama-file-search"
 name = "File Search"
-version = "1.9.2"
+version = "1.9.3"
 author = "yo"
 license = "MIT"
 icon = "search"
 description = "Panel Noctalia que busca en el índice local de DigUp."
 plugin_api = 43
-tags = ["panel", "ai", "productivity", "utility"]
+tags = ["bar", "panel", "ai", "productivity", "utility"]
 dependencies = ["digup", "find", "ffmpeg", "pdftoppm", "pgrep", "readlink", "sh", "xdg-open"]

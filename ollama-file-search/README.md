@@ -7,7 +7,7 @@ Search the local index maintained by DigUp from a Noctalia panel. Browse semanti
 | Field | Value |
 | --- | --- |
 | ID | `yo/ollama-file-search` |
-| Entries | Panel: `search` |
+| Entries | Bar widget: `bar_icon`; panel: `search` |
 
 ## Requirements
 
@@ -20,6 +20,8 @@ Search the local index maintained by DigUp from a Noctalia panel. Browse semanti
 ## Usage
 
 Enable **File Search** in Settings → Plugins. Add folders and wait for indexing in DigUp. Open the panel and enter a query. Use the filter buttons or Left/Right to switch between all files, images, text, and videos. Up/Down changes the selected result; Enter opens it with `xdg-open`.
+
+In Settings → Bar → Bar Widgets, add the `bar_icon` widget to a bar. Click its search icon to open or close the File Search panel.
 
 Open the panel from a compositor keybind with:
 
