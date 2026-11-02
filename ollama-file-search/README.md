@@ -34,7 +34,7 @@ Ctrl+K clears the query and focuses the search field. By default, **Keep preview
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
 | `digup_cli` | `string` | `""` | Optional path to DigUp's `digup` helper. Leave blank for automatic detection. |
-| `max_results` | `int` | `8` | Maximum results shown (1–30). |
+| `max_results` | `int` | `8` | Maximum results shown (1–12). |
 | `keep_preview_open` | `bool` | `true` | Automatically preview the first result and keep its preview visible while navigating. |
 
 ## Notes

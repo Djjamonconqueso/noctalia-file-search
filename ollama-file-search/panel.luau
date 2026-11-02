@@ -1,6 +1,6 @@
 --!nonstrict
 
-local MAX_VISIBLE_RESULTS = 30
+local MAX_VISIBLE_RESULTS = 12
 local IMAGE_EXTENSIONS = {
     png = true, jpg = true, jpeg = true, webp = true, gif = true,
     bmp = true, avif = true, tif = true, tiff = true, svg = true,
@@ -616,6 +616,8 @@ function onKey(chord, pressed)
         else
             selectResult(visible[selectedIndex])
         end
+    elseif chord == "Return" and focusSearch then
+        executeSearch(queryText)
     elseif chord == "Return" and not focusSearch and #visible > 0 then
         noctalia.runAsync({ "xdg-open", visible[selectedIndex].path })
     elseif (chord == "left" or chord == "right") and not focusSearch and #results > 0 then

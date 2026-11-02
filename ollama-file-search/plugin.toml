@@ -1,6 +1,6 @@
 id = "yo/ollama-file-search"
 name = "File Search"
-version = "1.9.0"
+version = "1.9.2"
 plugin_api = 43
 author = "yo"
 license = "MIT"
@@ -23,7 +23,7 @@ label_key = "settings.max_results.label"
 description_key = "settings.max_results.description"
 default = 8
 min = 1
-max = 30
+max = 12
 
 [[setting]]
 key = "keep_preview_open"
