@@ -1,11 +1,22 @@
-# Fuente local de plugins para Noctalia
+# File Search for Noctalia
 
-Esta carpeta es una fuente local para Noctalia. Añádela como fuente de tipo `path`:
+A plugin source repository for Noctalia. File Search provides a panel for searching and previewing files indexed locally by DigUp.
+
+## Install from GitHub
+
+Add this repository as a Git plugin source in Noctalia, then enable **File Search** in Settings → Plugins:
+
+```sh
+noctalia msg plugins source add file-search git https://github.com/Djjamonconqueso/noctalia-file-search.git
+noctalia msg plugins enable yo/ollama-file-search
+```
+
+## Local development
+
+Add the repository root as a `path` source. Do not select the `ollama-file-search` subdirectory: Noctalia reads `catalog.toml` from the source root and locates the plugin directory from its ID.
 
 ```text
 ~/src/noctalia-ollama-search
 ```
 
-No selecciones la subcarpeta `ollama-file-search`: Noctalia lee `catalog.toml` en la raíz y encuentra cada plugin dentro de una subcarpeta con el nombre indicado por el ID. Después activa **File Search** en Settings → Plugins.
-
-El plugin está en [`ollama-file-search/`](ollama-file-search/README.md). Usa el CLI y el índice local de DigUp. El binario de DigUp no se incluye aquí: consulta allí cómo instalarlo desde sus publicaciones oficiales y cómo indicar la ruta de su helper `digup`.
+See [`ollama-file-search/README.md`](ollama-file-search/README.md) for DigUp installation, requirements, settings, and usage.
