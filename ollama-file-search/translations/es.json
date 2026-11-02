@@ -28,6 +28,7 @@
   "preview.start_failed": "No se pudo iniciar la vista previa.",
   "preview.video_ready": "Vídeo · ábrelo para reproducirlo.",
   "preview.video_no_thumbnail": "Miniatura no disponible; ábrelo para reproducir el vídeo.",
+  "preview.file_too_large": "El archivo es demasiado grande para previsualizarlo; ábrelo para ver su contenido.",
   "preview.read_failed": "No se pudo leer este archivo.",
   "preview.unsupported_text": "No hay vista previa de texto para este formato.",
   "preview.load_failed": "No se pudo cargar la vista previa.",

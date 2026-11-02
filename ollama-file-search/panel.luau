@@ -1,6 +1,9 @@
 --!nonstrict
 
 local MAX_VISIBLE_RESULTS = 12
+local MAX_RESULT_PATH_LENGTH = 4096
+local MAX_RESULT_SNIPPET_LENGTH = 1200
+local MAX_PREVIEW_BYTES = 256 * 1024
 local IMAGE_EXTENSIONS = {
     png = true, jpg = true, jpeg = true, webp = true, gif = true,
     bmp = true, avif = true, tif = true, tiff = true, svg = true,
@@ -212,8 +215,10 @@ local function normalizeResults(value)
     if type(rows) ~= "table" then return nil end
     local normalized = {}
     for _, item in ipairs(rows) do
-        if type(item) == "table" and type(item.path) == "string" then
-            item.snippet = item.excerpt or item.snippet or item.text or ""
+        if type(item) == "table" and type(item.path) == "string" and #item.path <= MAX_RESULT_PATH_LENGTH then
+            local snippet = item.excerpt or item.snippet or item.text or ""
+            if type(snippet) ~= "string" then snippet = "" end
+            item.snippet = snippet:sub(1, MAX_RESULT_SNIPPET_LENGTH)
             table.insert(normalized, item)
         end
     end
@@ -395,10 +400,20 @@ selectResult = function(item)
         end)
     elseif ext == "pdf" then
         openPdfPreview(item.path, requestId)
+    elseif BINARY_EXTENSIONS[ext] or AUDIO_EXTENSIONS[ext] then
+        preview.kind = "generic"
+        preview.message = tr("preview.unsupported_text")
+        render()
     else
+        if (tonumber(preview.info.size) or 0) > MAX_PREVIEW_BYTES then
+            preview.kind = "generic"
+            preview.message = tr("preview.file_too_large")
+            render()
+            return
+        end
         local accepted = noctalia.readFileAsync(item.path, function(contents, err)
             if not isOpen or requestId ~= currentQuery or not preview or preview.path ~= item.path then return end
-            if contents and not contents:find("%z") then
+            if contents and not contents:find("\0", 1, true) then
                 preview.kind = "text"
                 preview.contents = contents:sub(1, 24000)
                 preview.ext = ext

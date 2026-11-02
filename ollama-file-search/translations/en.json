@@ -28,6 +28,7 @@
   "preview.start_failed": "Could not start the preview.",
   "preview.video_ready": "Video · open it to play.",
   "preview.video_no_thumbnail": "Thumbnail unavailable; open it to play the video.",
+  "preview.file_too_large": "File is too large to preview; open it to view its contents.",
   "preview.read_failed": "Could not read this file.",
   "preview.unsupported_text": "Text preview is unavailable for this format.",
   "preview.load_failed": "Could not load the preview.",
